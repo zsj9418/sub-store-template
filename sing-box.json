@@ -59,6 +59,10 @@
   "route": {
     "rules": [
       {
+        "domain": ["copilot.microsoft.com"],
+        "outbound": "proxy"
+      },      
+      {
         "action": "sniff",
         "sniffer": [
           "http",
@@ -118,6 +122,12 @@
         "rule_set": "youtube_domain",
         "action": "route",
         "outbound": "youtube"
+      },
+      {
+        "domain": [
+        "copilot.microsoft.com"
+      ],
+        "outbound": "openai"
       },
       {
         "rule_set": "openai_domain",
